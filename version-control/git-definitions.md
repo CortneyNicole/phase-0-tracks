@@ -12,3 +12,6 @@
    A commit is a save point that records changes in code. A good commit message is discriptive and percise. 
 * What is a merge conflict?
    A merge conflict is when there are competing changes on the same line of a file or if a file has been deleted that some one else is editing.
+
+   **Release 2**
+   
