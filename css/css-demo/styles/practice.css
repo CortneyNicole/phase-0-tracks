@@ -2,6 +2,10 @@
   font-size: .8em;
 }
 
+#contact-info p:hover {
+  background-color: #e9e5dc;
+}
+
 .job {
   background-color: #e9e5dc;
   padding: .5px 4px;
@@ -11,4 +15,8 @@
 
 .list {
   font-size: .8em;
+}
+
+section .personal-objective > p {
+  font-style: italic;
 }
