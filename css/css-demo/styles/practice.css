@@ -17,6 +17,7 @@
   font-size: .8em;
 }
 
-section .personal-objective > p {
-  font-style: italic;
+#funkycolors > li {
+  color: #008080;
+  font-family: 'Pangolin', cursive;
 }
