@@ -4,7 +4,7 @@
   name = gets.chomp
 
   puts "How loud are you from 1-10?"
-  volume_level = gets.chomp
+  volume_level = gets.chomp.to_i
 
   puts "What's your fur color?"
   fur_color = gets.chomp
@@ -13,9 +13,14 @@
   adoptable = gets.chomp
 
   puts "How old are you?"
-  age = gets.chomp
+  age = gets.chomp.to_i
+
+if adoptable == "yes" || adoptable =="true"
+  adoptable = true
+elsif adoptable =="no" || adoptable == "false"
+  adoptable = false
+end
 
 if age == ""
    age = nil
 end
-
