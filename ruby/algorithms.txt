@@ -1,0 +1,29 @@
+# Elevator Algorithm
+
+* press elevator call button, wait for arrival sound
+* enter elevator 
+* turn toward the front of elevator and notice floor buttons 
+    -remember the floor number I told you (floor #6)
+    -count two buttons up on the left 
+    -count three buttons to the right
+    -press that button
+* listen to number of chimes. When chimes equal 6 the doors will open
+* exit elevator
+
+# Making a Smoothie
+* wake up at 7:00:00:00 
+* stomach growls
+* go to kitchen
+* grab blender
+* open fridge, grab yogurt and pom juice
+* open freezer grab mixed  berries
+  - pour juice in blender
+  - add yogurt
+  - add berries 
+*  put lid on blender
+  - turn blender on 
+* if ingredients get stuck 
+  -take to off 
+  -stir ingredients 
+* when blended remove the lid
+* pour smoothie into cup
