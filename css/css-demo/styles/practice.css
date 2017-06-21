@@ -1,0 +1,23 @@
+#contact-info {
+  font-size: .8em;
+}
+
+#contact-info p:hover {
+  background-color: #e9e5dc;
+}
+
+.job {
+  background-color: #e9e5dc;
+  padding: .5px 4px;
+  margin: 8px;
+  border-radius: 25px;
+}
+
+.list {
+  font-size: .8em;
+}
+
+#funkycolors > li {
+  color: #008080;
+  font-family: 'Pangolin', cursive;
+}

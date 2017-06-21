@@ -1,3 +1,4 @@
+
 # Elevator Algorithm
 
 * press elevator call button, wait for arrival sound
@@ -27,3 +28,5 @@
   -stir ingredients 
 * when blended remove the lid
 * pour smoothie into cup
+to cup
+
