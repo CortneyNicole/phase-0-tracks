@@ -1,7 +1,6 @@
 
-
   puts "what's your name?"
-  name = gets.chomp
+  name = gets.chomp.capitalize
 
   puts "How loud are you from 1-10?"
   volume_level = gets.chomp.to_i
@@ -13,7 +12,7 @@
   adoptable = gets.chomp
 
   puts "How old are you?"
-  age = gets.chomp.to_i
+  age = gets.chomp
 
 if adoptable == "yes" || adoptable =="true"
   adoptable = true
@@ -22,5 +21,9 @@ elsif adoptable =="no" || adoptable == "false"
 end
 
 if age == ""
-   age = nil
+   age = "nil"
+else
+  age.to_i
 end
+
+puts "#{name} is #{age} years old with #{fur_color} fur. #{name}'s volume level is #{volume_level}. #{name}'s adoptablility = #{adoptable}."
