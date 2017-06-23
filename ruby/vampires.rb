@@ -11,7 +11,20 @@ until employee_number == 0
   puts "Our cafeteria serves garlic bread. Do you want us to set an order for you?(yes/no)"
   garlic_bread = gets.chomp
   puts "would you like to enroll in our company's health insurence?(yes/no)"
-  insurence = gets.chomp
+  insurence = gets.chom
+  puts "Do you have any allergies?"
+  allergies = gets.chomp
+
+  if allergies == "done"
+    allergies = true
+  else 
+    allergies = false
+  end
+
+  until allergies == "done" || "sunshine"
+    puts "Do you have any more?"
+    allergies = gets.chomp
+  end
 
   employee_age = 2017 - year_born
   if age == employee_age
@@ -38,8 +51,16 @@ until employee_number == 0
      name = false
   end
 
+  if allergies == "sunshine" 
+    allergies = true
+  else 
+    allergies = false
+  end
+
   if name 
     puts "VAMPIRE!!!!"
+  elsif allergies 
+    puts "Vampire!!!"
   elsif !age && (!garlic_bread && !insurence)
     puts "Almost Certainly a Vampire!"
   elsif !age && (!garlic_bread || !insurence)
