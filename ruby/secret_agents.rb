@@ -35,7 +35,25 @@ encrypt ('swordfish")
 def decrypt(string)
   alphabet = "abcdefghijklmnopqrstuvwxyz"
   index =  0
-  decrypted_wordg = ""
+  decrypted_word = ""
   while index < string.length
-   
+   if string[index] == "z"
+      decrypted_word += "a"
+   elsif string[index] == " "
+      decrypted_word += " "
+   else 
+      back_alpha_index = alphabet.index(string[index]) - 1 
+      decrypted_word += alphabet[back_alpha_index]
+   end
+    index += 0
+  end
+  p decrypted_word
+end
+
+decrypt ("bcd")
+decrypt ("afe")
+
+
+
+
 end
