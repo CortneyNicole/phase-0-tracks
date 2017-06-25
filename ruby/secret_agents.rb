@@ -27,3 +27,15 @@ def encrypt(string)
   end
   p new_string
 end
+
+encrypt ("abc")
+encrypt ("zed")
+encrypt ('swordfish")
+
+def decrypt(string)
+  alphabet = "abcdefghijklmnopqrstuvwxyz"
+  index =  0
+  decrypted_wordg = ""
+  while index < string.length
+   
+end
