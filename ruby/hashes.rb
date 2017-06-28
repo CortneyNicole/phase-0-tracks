@@ -29,14 +29,13 @@ p interior_design
 puts "Do you need to update anything? (yes/no)"
 update = gets.chomp
 
-# if update == "no"
-#   next
-# end
+if update != "no"
 
  puts "What would you like to update? (name, contact, color, wallpaper, number_rooms, or style)"
 update = gets.chomp
 puts "What is the update?"
 interior_design[update.to_sym] = gets.chomp
+end
 
 p interior_design
 
