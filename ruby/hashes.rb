@@ -3,26 +3,40 @@
 * create survey asking user information and gather user input.
 * create hash
 * use keys in survey to collect user input
+* print hash
+* creat method to allow user to repeat
 =end
 
-
-
-
-
-
-
+interior_design = Hash.new()
 
 puts "Please, tell me your name."
-[:name] = gets.chomp
+interior_design[:name] = gets.chomp
 puts "Whats your phone number?"
-[:contact] = gets.chomp
+interior_design[:contact] = gets.chomp
 puts "Whats your favorite color?"
-[:color] = gets.chomp
+interior_design[:color] = gets.chomp
 puts "Are you open to wallpaper? (yes/no)"
-[:wallpaper] = gets.chomp
+interior_design[:wallpaper] = gets.chomp
 puts "How many rooms do you want done?"
-[:number_rooms] = gets.chomp
+interior_design[:number_rooms] = gets.chomp
 puts "Do you prefer modern or rustic?"
-[:style] = gets.chomp
+interior_design[:style] = gets.chomp
+
+interior_design.each_value { |value| puts value}
 
 p interior_design
+
+puts "Do you need to updat anything? (yes/no)"
+update = gets.chomp
+
+# if update == "no"
+#   next
+# end
+
+ puts "What would you like to update? (name, contact, color, wallpaper, number_rooms, or style)"
+update = gets.chomp
+puts "What is the update?"
+interior_design[update.to_sym] = gets.chomp
+
+p interior_design
+
