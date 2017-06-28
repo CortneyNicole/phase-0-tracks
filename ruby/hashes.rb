@@ -11,9 +11,9 @@ interior_design = Hash.new()
 
 puts "Please, tell me your name."
 interior_design[:name] = gets.chomp
-puts "Whats your phone number?"
+puts "What's your phone number?"
 interior_design[:contact] = gets.chomp
-puts "Whats your favorite color?"
+puts "What's your favorite color?"
 interior_design[:color] = gets.chomp
 puts "Are you open to wallpaper? (yes/no)"
 interior_design[:wallpaper] = gets.chomp
@@ -26,7 +26,7 @@ interior_design.each_value { |value| puts value}
 
 p interior_design
 
-puts "Do you need to updat anything? (yes/no)"
+puts "Do you need to update anything? (yes/no)"
 update = gets.chomp
 
 # if update == "no"
