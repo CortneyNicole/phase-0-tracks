@@ -90,3 +90,17 @@ bridal_party = {
 
 
 p bridal_party
+
+p bridal_party[:maid_of_honor][:outfit][:shoes]
+
+p bridal_party[:matron_of_honor][:plus_one][1]
+
+p bridal_party[:bridesmaid_1][:plus_one][0]
+
+p bridal_party[:bridesmaid_1][:plus_one][0] = "Remington"
+
+p bridal_party[:brides_man][:outfit]
+
+p bridal_party[:maid_of_honor][:name] = 'Bestie'
+
+p bridal_party
