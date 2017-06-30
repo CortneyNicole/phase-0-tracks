@@ -21,6 +21,13 @@ end
 search(array, 44)
 
 #release 2
+=begin
+*initiate array that is empty but intialize with 100
+*creater method that starts w 0 and 1 set to variables and add
+*math = 0 + 1 = 2 + 1 = 3 + 2 = 5 + 3 = 8
+*call array run through it until adds up each number til the number called
+=end
+
 fib_array = Array.new
 
 def fibonacci(n)
@@ -35,8 +42,9 @@ def fibonacci(n)
 
 end
 
-50.times do |n|
+100.times do |n|
   fib_array.push(fibonacci(n))
+
 end
 
 p fib_array
