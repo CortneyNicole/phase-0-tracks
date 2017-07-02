@@ -1,3 +1,18 @@
+puts "Please enter a first name. "
+first_name = gets.chomp
+
+puts "Please enter a last name."
+last_name = gets.chomp
+
+
+if first_name && last_name != "done"
+  puts "Please enter a first name. "
+  first_name =gets.chomp
+  puts "Please enter a last name."
+  last_name = gets.chomp
+end
+
+
 def alias_manager(first_name, last_name)
 
   name = last_name + " " + first_name
@@ -63,4 +78,6 @@ def alias_manager(first_name, last_name)
   name_array.join
 end
 
-alias_manager("Felicia", "Torres" )
+
+
+alias_manager(first_name, last_name)
