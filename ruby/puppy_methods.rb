@@ -1,4 +1,18 @@
+
+  # def initialize(name)
+  #   name = Puppy.new
+  # end
+
+
+
+
 class Puppy
+
+
+  def initialize(name)
+    @name = name
+    puts "Initializing new puppy instance ..."
+  end
 
   def fetch(toy)
     puts "I brought back the #{toy}!"
@@ -24,6 +38,8 @@ class Puppy
 
 end
 
+Puppy.new("bella")
+
 fido = Puppy.new
 fido.fetch("ball")
 
@@ -34,3 +50,6 @@ fido.roll_over
 fido.dog_years(2)
 
 fido.sit
+
+
+
