@@ -9,8 +9,7 @@
 class Puppy
 
 
-  def initialize(name)
-    @name = name
+  def initialize
     puts "Initializing new puppy instance ..."
   end
 
@@ -38,7 +37,7 @@ class Puppy
 
 end
 
-Puppy.new("bella")
+
 
 fido = Puppy.new
 fido.fetch("ball")
@@ -50,6 +49,8 @@ fido.roll_over
 fido.dog_years(2)
 
 fido.sit
+
+bella = Puppy.new
 
 
 
