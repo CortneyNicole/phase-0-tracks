@@ -1,15 +1,9 @@
 
-  # def initialize(name)
-  #   name = Puppy.new
-  # end
-
-
-
-
 class Puppy
 
 
-  def initialize
+  def initialize(name)
+    @name = name
     puts "Initializing new puppy instance ..."
   end
 
@@ -37,7 +31,7 @@ class Puppy
 
 end
 
-
+Puppy.new("bella")
 
 fido = Puppy.new
 fido.fetch("ball")
@@ -50,7 +44,45 @@ fido.dog_years(2)
 
 fido.sit
 
-bella = Puppy.new
+class Harry_Potter_Characters
+
+ def initialize
+    puts "Welcome to Hogwarts"
+  end
+
+ def spell
+    puts "Poof"
+  end
+
+ def sort(house)
+    puts "Your house is #{house}"
+  end
+
+end
+
+ Hermione = Harry_Potter_Characters.new
+  Hermione.instance_of?(Harry_Potter_Characters)
+
+ Ron = Harry_Potter_Characters.new
+
+ Ron.spell
+  Hermione.sort("Griffendor")
+
+character_array = []
+
+50.times do
+   character_array.push(Harry_Potter_Characters.new)
+end
+
+p character_array
+
+character_array.each do |student|
+  student.spell
+  student.sort("gryffendor")
+end
+
+
+
 
 
 
