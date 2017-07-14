@@ -37,9 +37,25 @@ class Santa
   def get_mad_at(reindeer_name)
     @reindeer_array.insert(8, @reindeer_array.delete_at(@reindeer_array.index(reindeer_name)))
     p @reindeer_array
+
+  end
+
+  #getter
+
+  def gender
+    @gender
+  end
+
+  def age
+    @age
+  end
+
+  def ethnicity
+    @ethnicity
   end
 
   #setter
+
   def gender=(new_gender)
     @gender = new_gender
   end
@@ -72,7 +88,6 @@ santa.celebrate_birthday
 santa.get_mad_at("Dasher")
 santa.gender = "panda"
 puts "We updated your gender to #{santa.gender}"
-
 
 
 
