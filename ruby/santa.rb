@@ -38,19 +38,15 @@ class Santa
     @reindeer_array.insert(8, @reindeer_array.delete_at(@reindeer_array.index(reindeer_name)))
     p @reindeer_array
   end
+
+  #setter
+  def gender=(new_gender)
+    @gender = new_gender
+  end
+
 end
 
-#paul = Santa.new
-#paul.speak
-#paul.eat_milk_and_cookies("sugar")
 
-santa = Santa.new("female", "white")
-santa.speak
-santa.reindeer_ranking
-santa.about
-santa.santa_age(27)
-santa.celebrate_birthday
-santa.get_mad_at("Dasher")
 
 santa_array = []
 
@@ -65,8 +61,17 @@ santa_genders.length.times do |i|
   puts "intializing santa instance that is #{santa_genders[i]} and #{santa_ethnicities[i]}"
 end
 
+#driver code
 
-
+santa = Santa.new("female", "white")
+santa.speak
+santa.reindeer_ranking
+santa.about
+santa.santa_age(27)
+santa.celebrate_birthday
+santa.get_mad_at("Dasher")
+santa.gender = "panda"
+puts "We updated your gender to #{santa.gender}"
 
 
 
