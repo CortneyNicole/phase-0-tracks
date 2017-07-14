@@ -33,3 +33,45 @@
   #print out each key value pairs on own line
 # output: no output
 
+
+def groceries(item_str)
+  grocery_array = item_str.split
+  grocery_list = {}
+  grocery_array.each do |item|
+    grocery_list[item] = 1
+  end
+  grocery_list
+end
+
+def add_item(list, item, quantity)
+  list[item] = quantity
+  list
+end
+
+def remove_item(list, item)
+  list.delete(item)
+  list
+end
+
+def update_list(list, item, quantity)
+  list[item] = quantity
+  list
+end
+
+def print_list(list)
+  puts "Grocery List: "
+  list.each do |item, quantity|
+    puts "** #{item} = #{quantity}"
+  end
+end
+
+ grocery_list = groceries("carrots apples cereal pizza")
+
+ p add_item(grocery_list, "ice cream", 1)
+
+ p remove_item(grocery_list, "apples")
+
+ p update_list(grocery_list, "ice cream", 3)
+
+ print_list(grocery_list)
+
