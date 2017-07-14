@@ -1,11 +1,20 @@
+#pseudocode
+  # make given arrays global
+  # create santa_generator method that passes in gender list and ethnicity list
+    #iterate through each item in gender and ethnicity array x amount of times
+    # add method that will select a random number 1-40
+    # print attributes
+
+
+
 
 class Santa
-  attr_reader :age, :ethnicity
-  attr_accessor :gender
+  attr_accessor :gender, :age, :ethnicity
 
-  def initialize(gender, ethnicity)
+  def initialize(gender, ethnicity, age)
     @gender = gender
     @ethnicity = ethnicity
+    @age = age
   end
 
   def santa_age(age)
@@ -64,34 +73,19 @@ class Santa
 
 end
 
-
-
-santa_array = []
-
 santa_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 
 santa_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
 
-
-santa_genders.length.times do |i|
-  santa_array << Santa.new(santa_genders[i], santa_ethnicities[i])
-  puts "intializing santa instance that is #{santa_genders[i]} and #{santa_ethnicities[i]}"
+def santa_generator(genders_list, ethnicities_list)
+  100.times do
+    s = Santa.new(genders_list.sample, ethnicities_list.sample,rand(1..140))
+    puts "age: #{s.age}"
+    puts "ethnicity: #{s.ethnicity}"
+    puts "gender: #{s.gender}"
+    puts "*************"
+  end
 end
 
-#driver code
-
-santa = Santa.new("female", "white")
-santa.speak
-santa.reindeer_ranking
-santa.about
-santa.santa_age(27)
-santa.celebrate_birthday
-santa.get_mad_at("Dasher")
-santa.gender = "panda"
-puts "We updated your gender to #{santa.gender}"
-
-
-
-
-
+santa_generator(santa_genders, santa_ethnicities)
