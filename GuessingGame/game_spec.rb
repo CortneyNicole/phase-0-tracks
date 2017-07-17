@@ -24,6 +24,9 @@ describe GuessingGame do
     expect(game.guessed_letters).to eq ["w"]
   end
 
+  it 'locates the index of letter' do
+
+
   it 'keeps track of progress' do
       game.get_word("word")
       expect(game.guess_state).to eq "____"
