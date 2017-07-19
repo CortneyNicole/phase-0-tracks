@@ -100,3 +100,22 @@ STATE_DATA.each do |state, pop_hash|
 end
 #=======================================================================
 # Reflection Section
+=begin
+
+What are the differences between the two different hash syntaxes shown in the state_data file?
+  hash rockets and colons
+
+What does require_relative do? How is it different from require?
+  Require needs an absolute path, explicit
+  Require relative file w/in same directory. Is generally another Ruby file.
+
+What are some ways to iterate through a hash?
+  .each, .each_key, .each_value
+
+When refactoring virus_effects, what stood out to you about the variables, if anything?
+  the variables are instances variables so they are already available within the class thus the variables do not need to be taken as parameters. the variables also did not need the @ symbol
+
+What concept did you most solidify in this challenge?
+  require and require_relative. That you have to set a ruby method to private else it is automatically public.
+
+=end
