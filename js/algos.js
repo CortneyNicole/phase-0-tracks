@@ -1,7 +1,14 @@
-//create a list of words
+
+
+
 var wordArray = ["crazy", "cat", "lady", "love", "coffee"];
 
-//create a program to select the longest word and return it
-function longestWord
+var longest = "";
 
-end
+for(i = 0; i < wordArray.length; i++) {
+  if(wordArray[i].length > longest.length) {
+    longest =wordArray[i];
+  }
+}
+
+console.log(longest);
