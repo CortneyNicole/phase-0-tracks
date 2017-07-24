@@ -35,7 +35,7 @@ function matchObjects(obj1, obj2) {
 
 //Release 2
 // create a program that takes a number as an argument
-function randomLengthArray(number) {
+function randomLengthArray(nLength) {
   //create alphabet string
   var alphabet = "abcdefghijklmnopqrstuvwxyz";
   //generating random number for length of array strings
