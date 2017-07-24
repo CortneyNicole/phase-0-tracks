@@ -1,9 +1,10 @@
 
 //Release 0
-function wordArray(array) {
+//longest word method
+function longestWord(wordArray) {
   var longest = "";
-  for(i = 0; i < array.length; i++) {
-    if(array[i].length > longest.length) {
+  for(i = 0; i < wordArray.length; i++) {
+    if(wordArray[i].length > longest.length) {
       longest = array[i];
     }
   }
@@ -40,8 +41,8 @@ function matchObjects(obj1, obj2) {
 
 var array1 = ["crazy", "cat", "lady", "love", "coffee"];
 var array2 = ["stress", "bootcamp", "confusion", "excitement"];
-console.log(wordArray(array1));
-console.log(wordArray(array2));
+console.log(longestWord(array1));
+console.log(longestWord(array2));
 
 var gemmaCat = {name: "Maddi", adoptionAge: "10 months", age: 4};
 var maddiCat = {name: "Gemma", adoptionAge: "10 months", age: 2};
