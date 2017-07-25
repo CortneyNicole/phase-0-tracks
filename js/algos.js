@@ -33,20 +33,26 @@ function matchObjects(obj1, obj2) {
 }
 
 
-//Release 2
-// create a program that takes a number as an argument
-function randomLengthArray(nLength) {
+function randomLengthArray(integer) {
   //create alphabet string
   var alphabet = "abcdefghijklmnopqrstuvwxyz";
-  //generating random number for length of array strings
-  min = Math.ceil(1);
-  max = Math.floor(10);
-  var  stringLengths = Math.floor(Math.random() * (max - min + 1)) + min;
-  //loop through alphabet and and set the index to stringLength
-  for (i = 0; i < alphabet.length; i++) {
-    alphabet[i] = stringLengths
+  var newArray = [];
+  for (var i = 0; i < integer; i++){
+    //create a new word
+    var newWord = "";
+    //create length
+    var wordLength = Math.floor(Math.random() * 10) + 1;
+      //until you loop through the length of the word length
+      for (var j = 0; j < wordLength; j++) {
+        //generate random number between 1 and 26
+        var letter = Math.floor(Math.random() * 26) + 1;
+        newWord += alphabet.charAt(letter);
+      }
+      newArray.push(newWord);
+    }
+    return newArray;
   }
-}
+
 
 
 //driver code
@@ -64,6 +70,12 @@ var gemmaCat = {name: "Maddi", adoptionAge: "10 months", age: 4};
 var maddiCat = {name: "Gemma", adoptionAge: "10 months", age: 2};
 console.log(matchObjects(maddiCat, gemmaCat));
 console.log("***********")
+
+//release 2
+console.log(randomLengthArray(8));
+console.log("*******")
+
+console.log(longestWord(randomLengthArray(6)));
 
 
 
