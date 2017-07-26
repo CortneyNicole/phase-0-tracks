@@ -1,0 +1,17 @@
+SELECT the table you want.the attribute you want
+FROM the table
+JOIN the other table ON the same table you just refrenced businesses.id = reviews.business_id
+
+SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment
+FROM reviews
+JOIN businesses ON businesses.id = reviews.business_id
+JOIN users ON users.id = reviews.user_id;
+
+SELECT businesses.name, reviews.stars, reviews.comment
+FROM reviews
+JOIN businesses ON reviews.business_id = businesses.id
+WHERE businesses.id = 2;
+
+
+
+
