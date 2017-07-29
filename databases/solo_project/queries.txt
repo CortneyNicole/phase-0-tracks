@@ -1,0 +1,64 @@
+sqlite> SELECT * FROM bridesmaids, brides  WHERE bridesmaids.bride_id = brides.id;
+1|Jamie|maid of honor|1|1|Cortney
+2|Paula|matron of honor|1|1|Cortney
+3|Jenny|maid of honor|2|2|Rachel
+4|Ryan|brides man|1|1|Cortney
+5|Kevin|best man|2|2|Rachel
+6|Ali|bridesmaid|2|2|Rachel
+7|Laure|bridesmaid|1|1|Cortney
+8|Marlena|bridesmaid|1|1|Cortney
+9|Marketa|bridesmaid|2|2|Rachel
+10|Stephanie|bridesmaid|1|1|Cortney
+11|Heather|bridesmaid|2|2|Rachel
+
+sqlite> SELECT * FROM bridesmaids, brides  WHERE bridesmaids.bride_id = brides.id;
+1|Jamie|maid of honor|1|1|Cortney
+2|Paula|matron of honor|1|1|Cortney
+3|Jenny|maid of honor|2|2|Rachel
+4|Ryan|bestman|1|1|Cortney
+5|Kevin|best man|2|2|Rachel
+6|Ali|bridesmaid|2|2|Rachel
+7|Laure|bridesmaid|1|1|Cortney
+8|Marlena|bridesmaid|1|1|Cortney
+9|Marketa|bridesmaid|2|2|Rachel
+10|Stephanie|bridesmaid|1|1|Cortney
+11|Heather|bridesmaid|2|2|Rachel
+
+sqlite> SELECT bridesmaids.name, bridesmaids.responsiblities, brides.name FROM bridesmaids JOIN brides ON bridesmaids.bride_id = brides.id;
+Jamie|maid of honor|Cortney
+Paula|matron of honor|Cortney
+Jenny|maid of honor|Rachel
+Ryan|bestman|Cortney
+Kevin|best man|Rachel
+Ali|bridesmaid|Rachel
+Laure|bridesmaid|Cortney
+Marlena|bridesmaid|Cortney
+Marketa|bridesmaid|Rachel
+Stephanie|bridesmaid|Cortney
+Heather|bridesmaid|Rachel
+
+sqlite> SELECT bridesmaids.name, brides.name FROM bridesmaids JOIN brides ON bridesmaids.bride_id = brides.id;
+Jamie|Cortney
+Paula|Cortney
+Jenny|Rachel
+Ryan|Cortney
+Kevin|Rachel
+Ali|Rachel
+Laure|Cortney
+Marlena|Cortney
+Marketa|Rachel
+Stephanie|Cortney
+Heather|Rachel
+
+sqlite> DELETE FROM bridesmaids WHERE name="Stephanie";
+sqlite> SELECT * FROM bridesmaids;
+1|Jamie|maid of honor|1
+2|Paula|matron of honor|1
+3|Jenny|maid of honor|2
+4|Ryan|bestman|1
+5|Kevin|best man|2
+6|Ali|bridesmaid|2
+7|Laure|bridesmaid|1
+8|Marlena|bridesmaid|1
+9|Marketa|bridesmaid|2
+11|Heather|bridesmaid|2
