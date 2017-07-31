@@ -23,7 +23,7 @@ def create_pw_site(domain_name, password)
 end
 
 #update password
-def update_pw(db, domain_name, password)
+def update_pw(pw_db, domain_name, password)
   pw_db.execute("UPDATE pw_organizer SET password=#{password} WHERE domain_name='#{domain_name}'")
 end
 
