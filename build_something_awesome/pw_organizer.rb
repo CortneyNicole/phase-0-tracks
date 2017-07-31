@@ -34,9 +34,58 @@ def delete_login(db)
   return_all(db)
 end
 
+def view_logins(db, domain_name)
+  all_logins = db.execute("SELECT * FROM organizer")
+  p all_logins
+end
 
+def action(db)
+  correct_action = false
+  until correct_action
+    puts "What action would you like to perform (add/delete/update/view)?"
+    action = gets.chomp
+    if action == "add"
+      correct_action = true
+      add_login(db, domain_name, password)
+    elsif action == "update"
+      correct_action = true
+      update_password(db, domain_name, new_pw)
+    elsif action == "delete"
+      correct_action = true
+      delete_login(db)
+    elsif action == "view"
+      correct_action = true
+      view_logins(db, domain_name)
+    else
+      puts "That action does not exist please type 'add', 'delete', 'update'"
+    end
+  end
+end
+
+def run_organizer(db)
+  puts "Welcome to the password organizer"
+  answer = false
+  until answer
+    puts "Would you like to view, add, update, or delete you passwords?"
+    input = gets.chomp
+    if input == "yes"
+      answer = true
+      action(db)
+      true
+    elsif input == "no"
+      answer = true
+      puts "Have a good day!"
+      true
+    else
+      false
+    end
+  end
+end
 
 # passwords = db.execute("SELECT * FROM organizer")
 # passwords.each do |pw|
 #   puts "domain name:#{pw[1]} password:#{pw[2]}"
 # end
+
+#driver code
+run_organizer(db)
