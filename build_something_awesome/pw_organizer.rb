@@ -15,7 +15,7 @@ db.execute(create_table_cmd)
 
 #db.execute("INSERT INTO organizer (domain_name, password) VALUES ('facebook.com', 'rainbow')")
 
-def create_password(db, domain_name, password)
+def add_login(db, domain_name, password)
   db.execute("INSERT INTO organizer (domain_name, password) VALUES (?, ?)", [domain_name, password])
 end
 
@@ -23,6 +23,16 @@ end
 #   create_password(db, Faker::Internet.domain_name, Faker::Internet.password)
 # end
 
+def update_password(db, domain_name, new_pw)
+   db.execute("UPDATE organizer SET password='#{new_pw}'' WHERE domain_name='#{domain_name}'")
+end
+
+def delete_login(db)
+  puts "What login information would you like to delete?"
+  domain_name = gets.chomp
+  db.execute("DELETE FROM organizer WHERE domain_name='#{domain_name}'")
+  return_all(db)
+end
 
 
 
