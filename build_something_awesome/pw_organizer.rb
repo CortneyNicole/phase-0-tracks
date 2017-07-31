@@ -1,6 +1,7 @@
 require 'sqlite3'
 require 'faker'
 
+
 #create database
 db = SQLite3::Database.new("passwords-organizer.db")
 db.results_as_hash = true
@@ -16,3 +17,6 @@ SQL
 
 #create the phonebook table
 db.execute(create_table_cmd)
+
+# def
+# end
