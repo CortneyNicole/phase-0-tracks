@@ -15,7 +15,7 @@ db.execute(create_table_cmd)
 
 #db.execute("INSERT INTO organizer (domain_name, password) VALUES ('facebook.com', 'rainbow')")
 
-def add_login(db, domain_name, password)
+def create_login(db, domain_name, password)
   db.execute("INSERT INTO organizer (domain_name, password) VALUES (?, ?)", [domain_name, password])
 end
 
@@ -34,9 +34,17 @@ def delete_login(db)
   return_all(db)
 end
 
-def view_logins(db, domain_name)
+def view_logins(db)
   all_logins = db.execute("SELECT * FROM organizer")
   p all_logins
+end
+
+def add_login(db)
+  puts "Enter domain"
+  new_domain = gets.chomp
+  puts "Enter password"
+  new_pw = gets.chomp
+  create_login(db, new_domain, new_pw)
 end
 
 def action(db)
@@ -46,7 +54,7 @@ def action(db)
     action = gets.chomp
     if action == "add"
       correct_action = true
-      add_login(db, domain_name, password)
+      add_login(db)
     elsif action == "update"
       correct_action = true
       update_password(db, domain_name, new_pw)
@@ -55,7 +63,7 @@ def action(db)
       delete_login(db)
     elsif action == "view"
       correct_action = true
-      view_logins(db, domain_name)
+      view_logins(db)
     else
       puts "That action does not exist please type 'add', 'delete', 'update'"
     end
