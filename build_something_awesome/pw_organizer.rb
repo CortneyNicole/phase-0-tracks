@@ -9,7 +9,7 @@ pw_db = SQLite3::Database.new("passwords-organizer.db")
 create_table_cmd = <<-SQL
   CREATE TABLE IF NOT EXISTS pw_organizer(
   id INTEGER PRIMARY KEY,
-  website VARCHAR(255),
+  domain_name VARCHAR(255),
   password VARCHAR(255)
   )
 SQL
@@ -18,30 +18,38 @@ SQL
 pw_db.execute(create_table_cmd)
 
 #add new password and website pair to data base
-def add_pw_site(website, password)
-  pw_db.execute("INSERT INTO pw_organizer(website, password) VALUES (?, ?)", [website, password])
+def create_pw_site(domain_name, password)
+  pw_db.execute("INSERT INTO pw_organizer(domain_name, password) VALUES (?, ?)", [domain_name, password])
 end
 
 #update password
-def update_pw(db, website, password)
-  db.execute("UPDATE pw_organizer SET password=#{password} WHERE website='#{website}'")
+def update_pw(db, domain_name, password)
+  pw_db.execute("UPDATE pw_organizer SET password=#{password} WHERE domain_name='#{domain_name}'")
 end
 
 #delete password
 def delete_pw_site(pw_db)
   puts "which website abd password would you like to delete"
   name = gets.chomp
-  if current(pw_db, website)
-    db.execute("DELETE FROM pw_organizer WHERE website='#{website}'")
+  if current(pw_db, domain_name)
+    pw_db.execute("DELETE FROM pw_organizer WHERE domain_name='#{domain_name}'")
     return_all(pw_db)
   else
-    puts "#{website} is not in your phonebook"
+    puts "#{domain_name} is not in the organizer"
   end
 end
 
 #add website pw pair
-def add_pw_site(db, website, password)
-  db.execute("INSERT INTO pw_organizer (password, website) VALUES (?, ?)", [password, website])
-  puts return_website(pw_db, website)
-  run_pw_organizer(pw_db)
+def add_pw_site(pw_db, domain_name, password)
+  pw_db.execute("INSERT INTO pw_organizer (domain_name, password) VALUES (?, ?)", [domain_name, password])
+  puts return_website(pw_db, domain_name)
+
 end
+
+#create 10 new pairs
+10.times do
+  add_pw_site(pw_db, Faker::Internet.domain_name, Faker::Internet.password)
+end
+
+
+
