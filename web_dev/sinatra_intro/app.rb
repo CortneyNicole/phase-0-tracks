@@ -1,5 +1,6 @@
 # require gems
 require 'sinatra'
+require 'shotgun'
 require 'sqlite3'
 
 db = SQLite3::Database.new("students.db")
@@ -43,4 +44,11 @@ end
 get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
+end
+
+#release0
+#add contact route
+get '/contact/:address' do
+  address = params[:address]
+  "To contact us please send a letter to #{address}.<br> Thankyou!"
 end
