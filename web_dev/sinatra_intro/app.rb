@@ -66,4 +66,5 @@ end
 #add two numbers
 get '/add/:int1/:int2' do
   answer ="#{params[:int1].to_i + params[:int2].to_i}"
+  "The answer is #{answer}"
 end
