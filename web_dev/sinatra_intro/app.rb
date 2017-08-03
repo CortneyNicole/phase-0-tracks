@@ -9,9 +9,9 @@ db.results_as_hash = true
 # write a basic GET route
 # add a query parameter
 # GET /
-get '/' do
-  "#{params[:name]} is #{params[:age]} years old."
-end
+# get '/' do
+#   "#{params[:name]} is #{params[:age]} years old."
+# end
 
 # write a GET route with
 # route parameters
@@ -46,9 +46,24 @@ get '/students/:id' do
   student.to_s
 end
 
-#release0
+#release 0
 #add contact route
 get '/contact/:address' do
   address = params[:address]
   "To contact us please send a letter to #{address}.<br> Thankyou!"
+end
+
+#great job
+get '/' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end
+
+#add two numbers
+get '/add/:int1/:int2' do
+  answer ="#{params[:int1].to_i + params[:int2].to_i}"
 end
