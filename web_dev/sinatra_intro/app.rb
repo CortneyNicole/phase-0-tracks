@@ -68,3 +68,19 @@ get '/add/:int1/:int2' do
   answer ="#{params[:int1].to_i + params[:int2].to_i}"
   "The answer is #{answer}"
 end
+
+#bonus
+get '/students/:name' do
+  student = db.execute("SELECT * FROM students WHERE name=?", [params[:name]])
+  student.to_s
+end
+
+#release 1
+# Is Sinatra the only web app library in Ruby? What are some others?
+# No sinatra is not the only one. Other ones include ruby on rails and volt.
+
+# Are SQLite and the sqlite3 gem your only options for using a database with Sinatra? What are some others?
+#you can also use mongo
+
+# What is meant by the term web stack?
+#It refers to the components or technologies, languages, operating sytems, etc used to build a web site
