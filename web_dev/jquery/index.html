@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width">
+<link rel="apple-touch-icon" sizes="57x57" href="assets/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="assets/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="assets/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="assets/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="assets/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="assets/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="assets/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="assets/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="assets/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Lato" rel="stylesheet">
+<link rel="stylesheet" href="style.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>The Blank Page</title>
+</head>
+<body>
+  <header>
+    <nav>
+    <div class="logo">
+      <p><a href="index.html">Cortney and Rachel's Wedding</a></p>
+    </div>
+    <div class="nav-link hover">
+      <a href="index.html" class="hover">About Us</a>
+      <a href="the_day.html" class="hover1">The Best Day Ever</a>
+    </div>
+    </nav>
+  </header>
+  <div class="hero">
+    <p>#OnceUponABlank</p>
+  </div>
+  <div id="body-div">
+      <h1>About Us</h1>
+      <p>Our story begins with <a href="https://www.okcupid.com/" class="site-links">OKcupid</a>. Rachel found me and we had an instant connection. We texted non-stop for a week and then decided to meet up. Our first date was at Lazy Dog Restaurant and then we went to go see <i>The Visit</i>. After the movie we talked for hours until Starbucks closed at like 2am. We had another date the next day and since then we've pretty much been inseperable.</p>
+
+      <h2>The Proposal</h2>
+        <p>This May Rachel and I went on a roadtrip of the Pacifc Northwest. Little did I know there was an ulterior motive for this trip. We visited Ashland, Portland, Seattle, and Spokane. While the whole trip was amazing my favorite place were Seattle and Spokane. In Spokane we stayed at the beautiful <em>Historic Davenport Hotel</em>. Rachel took me to this gorgeous winery called <em>Arbor Crest</em>, where she very nervously and a little bit awkwardly proposed to me. She had it all planned out where I was wearing a purple dress and she was wearing kahki pants and a blue vest. Outfits similar to what Flynn Rider and Rapunzle wear in <i>Tangled</i>. The ring is gorgeous and <i>Tangled</i> themed as well. That night she took me to a lantern fest and we got to set off a latern to celebrate our engagement.</p>
+        <div id="proposal">
+          <img src="images/ring.jpg" alt="rings">
+        </div>
+        <div id="lanterns">
+          <img src="images/laterns.jpg" alt="lantern fest">
+        </div>
+        <div class="end">
+          <h4>Planning the Wedding</h4>
+            <p>While we have the major things planned let us know if you have any suggestions for djs, photographers, etc. Right now I am using <a href="https://www.theknot.com/" class="site-links">the knot</a> to help find vendors.</p>
+
+          <h4>Related Sites</h4>
+            <p><a href="https://www.theknot.com/" class="site-links">The knot's </a>website is decent overall, as its load times are relatively quick. However, the site is not entirely responsive on all pages. While it looks fine on a phone, on desktop the screen does not resize well as the width of the browser decreases. Also, the page is very cluttered and can be a little overwhelming when you first look at it. </p>
+        </div>
+      </div>
+<script>
+$(document).ready(function(){
+    $("a.hover").mouseover(function(){
+        $("a.hover").css("background-color", "lavender");
+    });
+    $("a.hover").mouseout(function(){
+        $("a.hover").css("background-color", "transparent");
+    });
+});
+$(document).ready(function(){
+    $("a.hover1").mouseover(function(){
+        $("a.hover1").css("background-color", "lavender");
+    });
+    $("a.hover1").mouseout(function(){
+        $("a.hover1").css("background-color", "transparent");
+    });
+});
+</script>
+</body>
+</html>
